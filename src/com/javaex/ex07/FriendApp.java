@@ -28,7 +28,7 @@ public class FriendApp {
         	System.out.print("학교: ");
         	String school = sc.nextLine();
         	System.out.println("--------------------------");
-        	friendArray[0] = name;
+        	friendArray[0] = f01;
 			friendArray[1] = f02;
 			friendArray[2] = f03;
         }
