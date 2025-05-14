@@ -22,12 +22,35 @@ public class Account {
 		this.balance = balance;
 	}
     
+	
+	public String getAccountNo() {
+		return accountNo;
+	}
+
+	public void setAccountNo(String accountNo) {
+		this.accountNo = accountNo;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
 	//필요한 메소드 작성
-    public void deposit() {
-    	
+    public void deposit(int money) {
+    	balance = balance + money;
     }
     
+    public void withdraw(int money) {
+    	balance = balance - money;
+    }
     
+    public void showBalance() {
+    	System.out.println(balance);
+    }
     
     
     

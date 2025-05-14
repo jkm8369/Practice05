@@ -12,12 +12,6 @@ public class FriendApp {
         
         System.out.println("친구를 3명 등록해 주세요");
         
-        Friend f01 = new Friend();
-        Friend f02 = new Friend();
-        Friend f03 = new Friend();
-        
-     
-        
         //for문 시작
         for(int i=0; i<friendArray.length; i++) {	
       
@@ -28,9 +22,13 @@ public class FriendApp {
         	System.out.print("학교: ");
         	String school = sc.nextLine();
         	System.out.println("--------------------------");
-        	friendArray[0] = f01;
-			friendArray[1] = f02;
-			friendArray[2] = f03;
+        	
+        	Friend friend = new Friend();
+        	friend.setName(name);
+        	friend.setHp(hp);
+        	friend.setSchool(school);
+        	
+        	friendArray[i] = friend;
         }
         //친구정보 3명 입력 로직 --> 반복문 사용
             
@@ -40,7 +38,7 @@ public class FriendApp {
         
         // 친구정보 출력
         for (int i = 0; i < friendArray.length; i++) {
-            friendArray[i].showInfo();
+        	friendArray[i].showInfo();
         }
 
         sc.close();
